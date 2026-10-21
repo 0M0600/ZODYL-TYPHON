@@ -1,0 +1,79 @@
+cat > index.html << 'FIN'
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZODYL TYPHON</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=JetBrains+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:'JetBrains Mono',monospace;overflow-x:hidden;min-height:100vh}
+canvas#rain{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#intro{position:fixed;inset:0;background:#000;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1s}
+#intro h1{font-family:'Cinzel',serif;font-size:clamp(28px,8vw,70px);letter-spacing:8px;color:#ff0a0a;text-shadow:0 0 20px #ff0a0a,0 0 60px #ff0000;animation:glitch 2s infinite}
+#intro p{margin-top:20px;font-size:clamp(10px,2vw,14px);letter-spacing:4px;color:#fff;opacity:0.8;text-align:center;padding:0 10px}
+@keyframes glitch{0%,100%{transform:none}20%{transform:skew(1deg)}40%{transform:skew(-1deg)}}
+#enterBtn{margin-top:40px;border:1px solid #ff0a0a;background:transparent;color:#ff0a0a;padding:12px 30px;cursor:pointer;letter-spacing:3px;transition:0.3s}
+#enterBtn:hover{background:#ff0a0a;color:#000;box-shadow:0 0 30px #ff0a0a}
+#main{position:relative;z-index:1;display:none;padding:20px;max-width:1100px;margin:auto}
+header{text-align:center;padding:30px 0}
+header h2{font-family:'Cinzel',serif;font-size:34px;color:#ff0a0a;letter-spacing:6px;text-shadow:0 0 15px #ff0a0a}
+header .sub{color:#aaa;font-size:11px;letter-spacing:3px;margin-top:8px}
+.input-box{background:rgba(20,0,0,0.85);border:1px solid #ff0a0a;padding:20px;border-radius:10px;margin:20px auto;max-width:500px;box-shadow:0 0 20px rgba(255,0,0,0.25);text-align:center}
+.input-box input{width:100%;background:#000;border:1px solid #ff0a0a;color:#fff;padding:14px;font-size:18px;text-align:center;outline:none;border-radius:5px;margin-top:10px}
+.input-box input:focus{box-shadow:0 0 15px #ff0a0a}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:30px}
+.card{background:rgba(15,0,0,0.9);border:1px solid #330000;border-radius:12px;padding:18px;transition:0.3s;position:relative}
+.card:hover{border-color:#ff0a0a;transform:translateY(-4px);box-shadow:0 0 25px rgba(255,10,10,0.4)}
+.card h3{color:#ff0a0a;font-size:13px;letter-spacing:2px;margin-bottom:10px}
+.card textarea{width:100%;height:150px;background:#000;border:1px solid #222;color:#ccc;font-size:11px;padding:10px;border-radius:6px;resize:none;outline:none}
+.card .num-tag{position:absolute;top:10px;right:12px;background:#ff0a0a;color:#000;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:bold}
+.btn-send{width:100%;margin-top:10px;background:#ff0a0a;border:none;color:#000;font-weight:bold;padding:11px;cursor:pointer;border-radius:6px;letter-spacing:1px}
+.btn-send:hover{background:#fff;box-shadow:0 0 15px #ff0a0a}
+</style>
+</head>
+<body>
+<canvas id="rain"></canvas>
+<div id="intro">
+<h1>ZODYL TYPHON</h1>
+<p>LA FORCE D'UN GUERRIER AU CHARISME D'UN ROI</p>
+<button id="enterBtn" onclick="enterSite()">ENTRER DANS L'ARENE</button>
+</div>
+<div id="main">
+<header>
+<h2>ZODYL TYPHON</h2>
+<div class="sub">WHATSAPP UNBAN ARSENAL • 10 TECHNIQUES ANIME</div>
+</header>
+<div class="input-box">
+<label>ENTRE TON NUMÉRO WHATSAPP BANNIS</label>
+<input type="text" id="phoneNumber" placeholder="+243 81 234 5678" oninput="updateAll()">
+<div style="font-size:10px;color:#666;margin-top:8px">Le numéro sera injecté automatiquement dans les 10 lettres</div>
+</div>
+<div class="grid" id="grid"></div>
+<div style="text-align:center;padding:40px 0;color:#444;font-size:10px;letter-spacing:2px">ZODYL TYPHON SYSTEM • UTILISE AVEC SAGESSE</div>
+</div>
+<script>
+const EMAILS = ["support@whatsapp.com","android@support.whatsapp.com","iphone@support.whatsapp.com","wp@support.whatsapp.com","webclient@support.whatsapp.com","smb@support.whatsapp.com","businesscomplaints@support.whatsapp.com","accessibility@support.whatsapp.com","privacy@whatsapp.com","kaios@support.whatsapp.com","smb_web@support.whatsapp.com","android_web@support.whatsapp.com","iphone_web@support.whatsapp.com","abuse@support.whatsapp.com"].join(",");
+const techniques = [
+{name:"1. RASENGAN - TOURBILLON DE L'ESPOIR",letter:`Bonjour équipe WhatsApp Support,\n\nJe vous contacte concernant mon numéro {NUMERO} qui a été banni par erreur.\n\nJe n'ai violé aucune règle, j'utilise WhatsApp pour ma famille et mon travail. Veuillez revoir mon cas et restaurer mon accès.\n\nMon numéro : {NUMERO}\nMerci.\nCordialement,`},
+{name:"2. KAMEHAMEHA - VAGUE DE VÉRITÉ",letter:`Hello WhatsApp Support Team,\n\nMy number {NUMERO} was banned. I think it was a mistake or automated error.\n\nI have never used modded WhatsApp or spam. Please manually review {NUMERO} and unban it.\n\nPhone: {NUMERO}\nThank you.`},
+{name:"3. BANKAI TENSA ZANGETSU - JUGEMENT FINAL",letter:`Equipe WhatsApp,\n\nJe fais appel au bannissement de {NUMERO}. Mon compte est essentiel pour mon business.\n\nJe m'engage à respecter toutes les conditions. Veuillez réactiver {NUMERO}.\n\nMerci d'avance.`},
+{name:"4. SUSANOO - BOUCLIER DIVIN",letter:`Dear WhatsApp Privacy & Support,\n\nI am writing about banned number {NUMERO}. I believe my account was flagged due to high activity but I was just adding contacts for work.\n\nI will be more careful. Please give me a second chance for {NUMERO}.\n\nBest regards.`},
+{name:"5. GEAR 5 BAJRANG GUN - LIBERTÉ",letter:`Support WhatsApp,\n\nS'il vous plaît, débloquez {NUMERO}. Je suis bloqué depuis plusieurs jours et je perds des clients.\n\nCe numéro {NUMERO} est mon seul moyen de contact pro.\n\nMerci de le restaurer.`},
+{name:"6. ULTRA INSTINCT - SAGESSE SUPRÊME",letter:`Hello,\n\nMy WhatsApp {NUMERO} got banned. I have not sent spam or bulk messages.\n\nI request a full review of {NUMERO}. I have been a loyal user for years.\n\nKindly unban {NUMERO}.`},
+{name:"7. DOMAIN EXPANSION - MALEVOLENT SHRINE",letter:`WhatsApp Business Support,\n\nMon numéro Business {NUMERO} a été suspendu. Je l'utilise pour mon service client.\n\nSans {NUMERO}, mon entreprise est bloquée. Veuillez réexaminer {NUMERO}.\n\nNuméro : {NUMERO}`},
+{name:"8. 100% DETROIT SMASH - FORCE BRUTE",letter:`To: WhatsApp Abuse Team,\n\nI am the owner of {NUMERO}. My account was banned for alleged abuse but I never abused the platform.\n\nPlease check logs for {NUMERO} and unban me. I am ready to provide ID proof.\n\nNumber: {NUMERO}`},
+{name:"9. AMATERASU - FLAMME ÉTERNELLE",letter:`Bonjour,\n\nJe vous écris avec respect pour le déban de {NUMERO}. J'ai peut-être été signalé par erreur par des personnes malveillantes.\n\nJe vous assure que {NUMERO} respecte les règles. Aidez-moi à récupérer mon compte.\n\nMerci infiniment.`},
+{name:"10. FINAL GETSUGA TENSHO - DERNIER RECOURS",letter:`Dear WhatsApp Team,\n\nThis is my final appeal for {NUMERO}. I have tried everything.\n\nPlease restore {NUMERO}. I lost all my conversations, family groups, and work.\n\nI promise to follow all rules. {NUMERO} means everything to me.\n\nPlease unban {NUMERO}.\nRespectfully.`}
+];
+function enterSite(){document.getElementById('intro').style.opacity='0';setTimeout(()=>{document.getElementById('intro').style.display='none';document.getElementById('main').style.display='block';},1000);}
+function render(){const grid=document.getElementById('grid');grid.innerHTML='';techniques.forEach((t,i)=>{const card=document.createElement('div');card.className='card';card.innerHTML=`<div class="num-tag" id="tag-${i}">NO NUM</div><h3>${t.name}</h3><textarea id="letter-${i}">${t.letter}</textarea><button class="btn-send" onclick="sendMail(${i})">📧 ENVOYER AUX 14 EMAILS SUPPORT</button>`;grid.appendChild(card);});}
+function updateAll(){let num=document.getElementById('phoneNumber').value.trim();if(!num) num='{NUMERO}';techniques.forEach((t,i)=>{let txt=t.letter.replace(/{NUMERO}/g,num);document.getElementById(`letter-${i}`).value=txt;document.getElementById(`tag-${i}`).innerText=num;});}
+function sendMail(index){let num=document.getElementById('phoneNumber').value.trim();if(!num||num.length<8){alert("Entre d'abord ton numéro en haut !");return;}let body=document.getElementById(`letter-${index}`).value;let subject=encodeURIComponent(`Demande de deban - ${num} - ${techniques[index].name}`);let bodyEnc=encodeURIComponent(body);window.location.href=`mailto:${EMAILS}?subject=${subject}&body=${bodyEnc}`;}
+const canvas=document.getElementById('rain');const ctx=canvas.getContext('2d');function resize(){canvas.width=innerWidth;canvas.height=innerHeight}window.addEventListener('resize',resize);resize();let drops=[];for(let i=0;i<140;i++) drops.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,l:10+Math.random()*25,s:1+Math.random()*3.5});function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='rgba(255,10,10,0.7)';drops.forEach(d=>{ctx.beginPath();ctx.moveTo(d.x,d.y);ctx.lineTo(d.x,d.y+d.l);ctx.stroke();d.y+=d.s;if(d.y>canvas.height){d.y=-20;d.x=Math.random()*innerWidth}});requestAnimationFrame(anim);}anim();render();
+</script>
+</body>
+</html>
+FIN
+ls
