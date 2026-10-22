@@ -93,9 +93,6 @@ const canvas=document.getElementById('rain');const ctx=canvas.getContext('2d');f
   </div>
 </div>
 <script>
-if(localStorage.getItem('zodyl_ok')==='yes'){
-  document.getElementById('zodyl-login').style.display='none';
-}
 function checkPin(){
   if(document.getElementById('pin').value===ZODYL_CODE){
     localStorage.setItem('zodyl_ok','yes');
