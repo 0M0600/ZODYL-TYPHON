@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZODYL TYPHON</title>
 <style>
-#zodyl-login{position:fixed;top:0;left:0;width:100%;height:100vh;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center}
-#zodyl-login .box{background:#111;padding:30px;border-radius:15px;text-align:center;border:1px solid #333;width:320px;color:#fff;font-family:sans-serif}
-#zodyl-login input{width:100%;padding:15px;font-size:28px;text-align:center;letter-spacing:12px;margin:15px 0;border-radius:10px;border:none;background:#222;color:#fff;box-sizing:border-box}
-#zodyl-login button{width:100%;padding:15px;background:#ff0a0a;color:#fff;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer}
+#zodyl-login{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;display:flex;justify-content:center;align-items:center}
+#zodyl-login .box{background:#111;padding:30px;border:1px solid #ff0a0a}
+#zodyl-login input{width:100%;padding:15px;font-size:20px}
+#zodyl-login button{width:100%;padding:15px;background:#ff0a0a;color:#fff;border:none;margin-top:10px;cursor:pointer}
 </style>
 <script>
-async function verifierCode(){
-  let codeEntre = document.querySelector('#zodyl-login input').value;
-  let reponse = await fetch('/api/check', {
-    method: 'POST',
-    headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({code: codeEntre})
-  });
-  let data = await reponse.json();
-  if(data.ok){
+function verifierCode(){
+  let code = document.querySelector('#zodyl-login input').value;
+  if(code === '654321'){
     document.getElementById('zodyl-login').style.display='none';
     document.getElementById('main').style.display='block';
   } else {
@@ -24,7 +21,6 @@ async function verifierCode(){
   }
 }
 </script>
-<title>ZODYL TYPHON</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=JetBrains+Mono:wght@400;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -108,20 +104,10 @@ const canvas=document.getElementById('rain');const ctx=canvas.getContext('2d');f
   <div class="box">
     <h2>ZODYL TYPHON</h2>
     <p>Code à 6 chiffres</p>
-    <input id="pin" type="password" maxlength="6" placeholder="••••••" inputmode="numeric">
+    <input id="pin" type="password"...
     <button onclick="checkPin()">ENTRER</button>
     <p id="err" style="color:#ff0a0a;margin-top:10px"></p>
   </div>
 </div>
-<script>
-function checkPin(){
-  if(document.getElementById('pin').value===ZODYL_CODE){
-    localStorage.setItem('zodyl_ok','yes');
-    document.getElementById('zodyl-login').style.display='none';
-  }else{
-    document.getElementById('err').innerText='Mauvais code !';
-  }
-}
-</script>
 </html>
 
