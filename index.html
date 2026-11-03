@@ -19,10 +19,28 @@
     object-fit: contain;
     object-position: center;
     background-color: #000000;
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    text-align: center;
 }
-#intro * {
+
+#intro h1, #intro p {
+    color: #ff0000 !important;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
     position: relative;
     z-index: 2;
+    margin-bottom: 15px;
+    padding: 0 20px;
 }
 </style>
 <style>
@@ -81,9 +99,9 @@ const techniques = [
 
 I am writing to report the theft and hacking of my client’s WhatsApp account. My name is Maître Cleo MASHINI MWATHA, an attorney based in Kinshasa/Gombe. I practice at the firm MASHINI et ASSOCIÉS, located at 25 Avenue de l’OUA, in the commune of Ngaliema, Kinshasa.
 
-My client is currently in detention due to the actions of the individual who hacked or stole his WhatsApp account {NUMERO}. The person who took control of this account has been threatening others and posting inappropriate content, which has led to my client’s detention. I therefore request that WhatsApp Support suspend this account, which was stolen and is being used to impersonate my client.
+My client is currently in detention due to the actions of the individual who hacked or stole his WhatsApp account https://api.whatsapp.com/send?phone={NUMERO}. The person who took control of this account has been threatening others and posting inappropriate content, which has led to my client’s detention. I therefore request that WhatsApp Support suspend this account, which was stolen and is being used to impersonate my client.
 
-I ask that you suspend this number {NUMERO} so that I may defend my client, who is innocent and has been the victim of a WhatsApp account hack.
+I ask that you suspend this https://api.whatsapp.com/send?phone={NUMERO} so that I may defend my client, who is innocent and has been the victim of a WhatsApp account hack.
 
 Thank you for reading my message. I implore you to intervene urgently, as my client—who is currently in detention—is at risk of imprisonment.
 
