@@ -10,28 +10,29 @@
 #zodyl-login input{width:100%;padding:15px;font-size:20px}
 #zodyl-login button{width:100%;padding:15px;background:#ff0a0a;color:#fff;border:none;margin-top:10px;cursor:pointer}
 #bgImageManga {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    object-fit: cover;
-    object-position: center;
-    background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+  background-color: #000000;
+}
 #intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 #intro h1, #intro p, #intro #enterBtn {
@@ -74,7 +75,7 @@ header .sub{color:#aaa;font-size:11px;letter-spacing:3px;margin-top:8px}
 <body>
 <canvas id="rain"></canvas>
 <div id="intro">
-<img src="walhalla.jpg.JPG" id="bgImageManga" alt="Walhalla Background">
+<img src="walhalla.jpg" id="bgImageManga" alt="Team Walhalla">
 <h1>BAJI D JAP</h1>
 <p>L'ANGE SANS TETE...LE PECHER DE L'AVARICE</p>
 <button id="enterBtn" onclick="enterSite()">ENTRER DANS L'ARENE</button>
