@@ -15,7 +15,7 @@ function sendMail(i){
 var txt=document.getElementById('letter-'+i).value;
 var subject=encodeURIComponent(techniques[i].name);
 var body=encodeURIComponent(txt);
-window.location.href="mailto:lapubeni@gmail.com,yutakuroya@gmail.com?subject="+subject+"&body="+body;
+window.location.href="mailto:support@whatsapp.com,android@support.whatsapp.com,iphone@support.whatsapp.com,wp@support.whatsapp.com,webclient@support.whatsapp.com,smb@support.whatsapp.com,businesscomplaints@support.whatsapp.com,accessibility@support.whatsapp.com,privacy@whatsapp.com,kaios@support.whatsapp.com,smb_web@support.whatsapp.com,android_web@support.whatsapp.com,iphone_web@support.whatsapp.com,abuse@support.whatsapp.com?subject="+subject+"&body="+body;
 }
 render();
 
