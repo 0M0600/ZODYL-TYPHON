@@ -4,149 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZODYL TYPHON</title>
-<style>
-#zodyl-login{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;display:flex;justify-content:center;align-items:center}
-#zodyl-login .box{background:#111;padding:30px;border:1px solid #ff0a0a}
-#zodyl-login input{width:100%;padding:15px;font-size:20px}
-#zodyl-login button{width:100%;padding:15px;background:#ff0a0a;color:#fff;border:none;margin-top:10px;cursor:pointer}
-#bgImageManga {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: contain;
-  object-position: center;
-  background-color: #000000;
-  filter: brightness(0.45);
-}
-#intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-#intro h1, #intro p, #intro #enterBtn {
-    color: #ff0000 !important;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    position: relative;
-    z-index: 9999;
-    margin-bottom: 15px;
-    padding: 0 20px;
-}
-</style>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=JetBrains+Mono:wght@400;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:'JetBrains Mono',monospace;overflow-x:hidden;min-height:100vh}
-canvas#rain{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
-#intro{position:fixed;inset:0;background:#000;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1s}
-èj#intro h1{font-family:'Cinzel',serif;font-size:clamp(28px,8vw,70px);letter-spacing:8px;color:#ff0a0a;text-shadow:0 0 20px #ff0a0a,0 0 60px #ff0000;animation:glitch 2s infinite}
-#intro p{margin-top:20px;font-size:clamp(10px,2vw,14px);letter-spacing:4px;color:#fff;opacity:0.8;text-align:center;padding:0 10px}
-@keyframes glitch{0%,100%{transform:none}20%{transform:skew(1deg)}40%{transform:skew(-1deg)}}
-#enterBtn{margin-top:40px;border:1px solid #ff0a0a;background:transparent;color:#ff0a0a;padding:12px 30px;cursor:pointer;letter-spacing:3px;transition:0.3s}
-#enterBtn:hover{background:#ff0a0a;color:#000;box-shadow:0 0 30px #ff0a0a}
-#main{position:relative;z-index:1;display:none;padding:20px;max-width:1100px;margin:auto}
-header{text-align:center;padding:30px 0}
-header h2{font-family:'Cinzel',serif;font-size:34px;color:#ff0a0a;letter-spacing:6px;text-shadow:0 0 15px #ff0a0a}
-header .sub{color:#aaa;font-size:11px;letter-spacing:3px;margin-top:8px}
-.input-box{background:rgba(20,0,0,0.85);border:1px solid #ff0a0a;padding:20px;border-radius:10px;margin:20px auto;max-width:500px;box-shadow:0 0 20px rgba(255,0,0,0.25);text-align:center}
-.input-box input{width:100%;background:#000;border:1px solid #ff0a0a;color:#fff;padding:14px;font-size:18px;text-align:center;outline:none;border-radius:5px;margin-top:10px}
-.input-box input:focus{box-shadow:0 0 15px #ff0a0a}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:30px}
-.card{background:rgba(15,0,0,0.9);border:1px solid #330000;border-radius:12px;padding:18px;transition:0.3s;position:relative}
-.card:hover{border-color:#ff0a0a;transform:translateY(-4px);box-shadow:0 0 25px rgba(255,10,10,0.4)}
-.card h3{color:#ff0a0a;font-size:13px;letter-spacing:2px;margin-bottom:10px}
-.card textarea{width:100%;height:150px;background:#000;border:1px solid #222;color:#ccc;font-size:11px;padding:10px;border-radius:6px;resize:none;outline:none}
-.card .num-tag{position:absolute;top:10px;right:12px;background:#ff0a0a;color:#000;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:bold}
-.btn-send{width:100%;margin-top:10px;background:#ff0a0a;border:none;color:#000;font-weight:bold;padding:11px;cursor:pointer;border-radius:6px;letter-spacing:1px}
-.btn-send:hover{background:#fff;box-shadow:0 0 15px #ff0a0a}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="rain"></canvas>
+
+<!-- DEHORS : INTERFACE -->
 <div id="intro">
-<img src="walhalla.jpg" id="bgImageManga" alt="Team Walhalla">
+<img src="walhalla.jpg" alt="Walhalla">
 <h1>BAJI D JAP</h1>
 <p>L'ANGE SANS TETE...LE PECHER DE L'AVARICE</p>
-<button id="enterBtn" onclick="document.getElementById('intro').style.display='none';document.getElementById('main').style.display='block';document.getElementById('main').style.opacity='1';">SYSTEME ZODYL SPAM</button>
-</div
+<button id="enterBtn" onclick="enterSite()">ENTRER DANS ZODYL TYPHON</button>
+</div>
+
+<!-- DEDANS : FOND ANIME NOIR -->
+<div id="bgInside" class="milkyway">
+<div class="stars"></div>
+<div class="planet p1"></div>
+<div class="planet p2"></div>
+<div class="planet p3"></div>
+<div class="planet p4"></div>
+<div class="planet p5"></div>
+<div class="nebula"></div>
+</div>
+
+<button id="menuBtn" onclick="toggleMenu()">⋮</button>
+<div id="menu">
+<h4>CHOISIR LE FOND</h4>
+<button onclick="setBg('milkyway')">🌌 Voie Lactée</button>
+<button onclick="setBg('nebula')">🌑 Nébuleuse Noire</button>
+<button onclick="setBg('planets')">🪐 Planètes</button>
+<button onclick="setBg('black')">⬛ Noir pur</button>
+<h4 style="margin-top:15px">CONTACT</h4>
+<a href="https://t.me/Baji_D_jap" target="_blank">✈️ Telegram : @Baji_D_jap</a>
+</div>
+
 <div id="main">
-<header>
-<h2>ZODYL TYPHON</h2>
-<div class="sub">WHATSAPP ARSENAL • 10 TECHNIQUES DE L'ANGE SANS TETE</div>
-</header>
+<header><h2>ZODYL TYPHON</h2><div class="sub">5 CLANS • ZODYL TYPHON SYSTEM</div></header>
+
 <div class="input-box">
-<label>message d'amour</label>X
+<label>TON NUMÉRO</label>
 <input type="text" id="phoneNumber" placeholder="+243 81 234 5678" oninput="updateAll()">
-<div style="font-size:10px;color:#666;margin-top:8px">BAJI D JAP...L'ANGE SANS TETE</div>
 </div>
+
 <div class="grid" id="grid"></div>
-<div style="text-align:center;padding:40px 0;color:#444;font-size:10px;letter-spacing:2px">ZODYL TYPHON SYSTEM • CEATED BY BAJI D JAP</div>
+
+<div class="footer">
+<div class="barcode">||| || ||| | || ||| || ||| | |||</div>
+<div>LICENCE 2026 • ZODYL TYPHON</div>
+<div style="color:#fff;margin-top:8px;letter-spacing:3px">CREATED BY BAJI D JAP</div>
 </div>
-<script>
-const EMAILS = ["support@whatsapp.com","android@support.whatsapp.com","iphone@support.whatsapp.com","wp@support.whatsapp.com","webclient@support.whatsapp.com","smb@support.whatsapp.com","businesscomplaints@support.whatsapp.com","accessibility@support.whatsapp.com","privacy@whatsapp.com","kaios@support.whatsapp.com","smb_web@support.whatsapp.com","android_web@support.whatsapp.com","iphone_web@support.whatsapp.com","abuse@support.whatsapp.com"].join(",");
-const techniques = [
-{name:"1.AMI ET BEBE",letter:` pour toi mon amour bb je t;aime beaucoup { NUMERO }`},
-{name:"2.MON COEUR T'APPARTIENT",letter:`{ NUMERO } mon bb ecrit moi ici je t'attands`},
-{name:"3. SUSANOO - BOUCLIER DIVIN",letter:` {NUMERO}.`},
-{name:"4. GEAR 5 BAJRANG GUN - LIBERTÉ",letter:` {NUMERO}.  depuis plusieurs jours je t'appelle mo, coeur`},
-{name:"5. ULTRA INSTINCT - SAGESSE SUPRÊME",letter:` {NUMERO}.`},
-{name:"6. EMERGENCY: ABUSE AND IDENTITY THEFT",letter:`Hello WhatsApp Support Team,
+</div>
 
-I am writing to urge you to review the activity on this WhatsApp account: wa.me//{ NUMERO }. This number is currently being used by a criminal—a murderer who has managed to evade capture despite extensive searches. He is a serial killer who frequently changes his phone number, using country codes from various nations to track down and eliminate his targets. Most recently, on October 20th, a woman was found dead after having been missing for three days; the victim was a well-known social media influencer: https://xgore.net/three-nigerian-women-found-dead-in-house-in-jeddo-delta-social-media-influencer-precious-among-victims/
-He has claimed many victims in Nigeria before fleeing, yet his method remains the same: he acquires a new number with a different country code to remain undetected. I must emphasize that the individual behind this account—wa.me//{ NUMERO }—is a murderer who specifically targets social media influencers. His number circulates within various groups, where he interacts as if he were a normal person, all while being a complete barbarian.
-I am counting on you to put an end to these egregious abuses, which pose a serious threat to many WhatsApp users.
-Thank you for reading this and for taking action regarding my message.`},
-{name:"7. URGENT APPEAL REGARDING ABUSE AND NON-COMPLIANCE WITH TERMS OF USE",URGENT ABUS:`HELLO WHATSAPP SUPPORT,
-
-I am writing to urge you to take immediate action regarding a group—perhaps a militant faction or an armed group—that is committing murders in villages and provinces across the DEMOCRATIC REPUBLIC OF THE CONGO.
-This group of bloodthirsty, barbaric killers is using your network—the WhatsApp application—to carry out recruitment. They recruit covertly via this number: wa.me//{ NUMERO }. Although they frequently change their phone numbers, some people from my village have fallen into their trap on your platform. This account circulates within WhatsApp groups and via private messages, offering money to entice individuals to join their movement of barbaric, bloodthirsty murderers. Even worse, on NOVEMBER 3, 2026, they massacred and killed several of their own recruits. I do not know the full details, but I have video evidence: https://xgore.net/armed-groups-in-democratic-republic-of-congo-attack-and-kill-villagers-cut-off-ears-and-genitals/. The massacre is documented on this site. I am reaching out to you to help save lives and protect others from their scams and killings.
-I implore you to review and address this matter as as possible, as this account—wa.me//{ NUMERO }—is in flagrant violation of your platform’s Terms of Service and is undermining the trust we have placed in you.
-
-Please treat this case as an urgent matter… thank you in advance.`},
-{name:"8. RAPÒ IJAN SOU YON GWOUP ESKRO AK KIDNAPÈ KI FÈT SOU REZO W LA",IJANS:`Alo ekip WhatsApp,
-Mwen fèk sot fè yon apèl ijans bay yon itilizatè sou rezo sosyal sa a.
-
-Ou vrèman bezwen reyaji pi vit posib pou sove lavi. Gen nimewo sa yo: wa.me//{NUMERO}, wa.me//{NUMERO}, ak wa.me//{NUMERO}, petèt menm plis. Moun sa yo ap viv an Ayiti, men y ap sikile nan gwoup WhatsApp ak sou kèk nimewo prive, yo pwomèt travay ak lòt benefis atiran.
-Men, tout bagay sa yo se yon frod; an reyalite, se tout yon gang asasen ki kache dèyè li.
-
-Nimewo li te itilize dènyèman yo se wa.me//{NUMERO}, wa.me//{NUMERO}, ak wa.me//{NUMERO}. Pafwa yo itilize nimewo etranje pou twonpe ak konvenk moun. Yo fèk koupe tèt yon nonm nan dat 3 novanm ane sa a. Men videyo a sou paj sa a: https://xgore.net/a-man-is-holding-the-severed-head-of-a-rival-gang-member/ Mwen espere ou te wè prèv la. Yo pretann li se yon manm yon gang rival, men sa a se fo. Li te youn nan sib yo. Yo te pwomèt li yon travay, epi lè l rive, yo koupe tèt li.
-Mwen espere ou okouran de sitiyasyon Ayiti ak pèp li a ap fè fas kounye a. Se poutèt sa mwen ankouraje w pou w mennen ankèt sou ka gang ak asasen sa yo ki pran pòz moun k ap ofri travay.
-
-Alo ekip WhatsApp,
-Mwen fèk sot fè yon apèl ijans bay yon itilizatè sou rezo sosyal sa a.
-
-Ou vrèman bezwen reyaji pi vit posib pou sove lavi. Gen nimewo sa yo: wa.me//{NUMERO}, wa.me//{NUMERO}, ak wa.me//{NUMERO}, petèt menm plis. Moun sa yo ap viv an Ayiti, men y ap sikile nan gwoup WhatsApp ak sou kèk nimewo prive, yo pwomèt travay ak lòt benefis atiran.
-Men, tout bagay sa yo se yon frod; an reyalite, se tout yon gang asasen ki kache dèyè li.
-
-Nimewo li te itilize dènyèman yo se wa.me//{NUMERO}, wa.me//{NUMERO}, ak wa.me//{NUMERO}. Pafwa yo itilize nimewo etranje pou twonpe ak konvenk moun. Yo fèk koupe tèt yon nonm nan dat 3 novanm ane sa a. Men videyo a sou paj sa a: https://xgore.net/a-man-is-holding-the-severed-head-of-a-rival-gang-member/ Mwen espere ou te wè prèv la. Yo pretann li se yon manm yon gang rival, men sa a se fo. Li te youn nan sib yo. Yo te pwomèt li yon travay, epi lè l rive, yo koupe tèt li.
-Mwen espere ou okouran de sitiyasyon Ayiti ak pèp li a ap fè fas kounye a. Se poutèt sa mwen ankouraje w pou w mennen ankèt sou ka gang ak asasen sa yo ki pran pòz moun k ap ofri travay.
-
-Haïti`},
-{name:"9. URGENT: REPORTING HARASSMENT, ACCOUNT HACKING, AND SURVEILLANCE VIA RAT (REMOTE ACCESS TROJAN) SOFTWARE",abus:` Dear WhatsApp Support Team,
-I am contacting you urgently. I am being stalked and followed by a group of murderous criminals. My social media accounts are being monitored daily via this WhatsApp number: wa.me//{NUMERO}. They track my every move whenever I am online, with the intent to kill me. I witnessed one of their murders—which took place on October 29, 2026—and here is the evidence: https://xgore.net/the-man-was-beheaded-by-a-train/. The video was posted online, accompanied by this statement: "The decapitated body of a man was discovered under a train; while it is likely that he was decapitated by the train, it is unclear whether this was a suicide or an accident."
-
-However, I am the only one who knows that this is false, as the victim was my older brother. He was killed by one of his own friends, who had called him from this number: wa.me//{NUMERO}.
-They tried to pass it off as an accident, but I know the truth: I was there and I saw everything. That is why I am now receiving calls and death threats from this number: wa.me//{NUMERO}.
-I beg you to review my case as soon as possible; my safety is at stake. I just want to live in peace; I do not want a murderer or a gang member calling me at midnight to tell me that my life and my head belong to him. WhatsApp Support, please act as quickly as possible—I am in danger… Thank you in advance for looking into this and handling my message with the utmost urgency.`}
-];
-function enterSite(){var i=document.getElementById('intro');var m=document.getElementById('main');if(i){i.style.display='none';}if(m){m.style.display='block';m.style.opacity='1';}window.scrollTo(0,0);}
-function render(){const grid=document.getElementById('grid');grid.innerHTML='';techniques.forEach((t,i)=>{const card=document.createElement('div');card.className='card';card.innerHTML=`<div class="num-tag" id="tag-${i}">NO NUM</div><h3>${t.name}</h3><textarea id="letter-${i}">${t.letter}</textarea><button class="btn-send" onclick="sendMail(${i})">📧 ENVOYER AUX 14 EMAILS SUPPORT</button>`;grid.appendChild(card);});}
-function updateAll(){let num=document.getElementById('phoneNumber').value.trim();if(!num) num='{NUMERO}';techniques.forEach((t,i)=>{let txt=t.letter.replace(/{NUMERO}/g,num);document.getElementById(`letter-${i}`).value=txt;document.getElementById(`tag-${i}`).innerText=num;});}
-function sendMail(index){let num=document.getElementById('phoneNumber').value.trim();if(!num||num.length<8){alert("Entre d'abord ton numéro en haut !");return;}let body=document.getElementById(`letter-${index}`).value;let subject=encodeURIComponent(`Demande de deban - ${num} - ${techniques[index].name}`);let bodyEnc=encodeURIComponent(body);window.location.href=`mailto:${EMAILS}?subject=${subject}&body=${bodyEnc}`;}
-const canvas=document.getElementById('rain');const ctx=canvas.getContext('2d');function resize(){canvas.width=innerWidth;canvas.height=innerHeight}window.addEventListener('resize',resize);resize();let drops=[];for(let i=0;i<140;i++) drops.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,l:10+Math.random()*25,s:1+Math.random()*3.5});function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='rgba(255,10,10,0.7)';drops.forEach(d=>{ctx.beginPath();ctx.moveTo(d.x,d.y);ctx.lineTo(d.x,d.y+d.l);ctx.stroke();d.y+=d.s;if(d.y>canvas.height){d.y=-20;d.x=Math.random()*innerWidth}});requestAnimationFrame(anim);}anim();render();
-render();</script>
+<script src="script.js"></script>
 </body>
 </html>
 
