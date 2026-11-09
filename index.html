@@ -147,7 +147,7 @@ function render(){const grid=document.getElementById('grid');grid.innerHTML='';t
 function updateAll(){let num=document.getElementById('phoneNumber').value.trim();if(!num) num='{NUMERO}';techniques.forEach((t,i)=>{let txt=t.letter.replace(/{NUMERO}/g,num);document.getElementById(`letter-${i}`).value=txt;document.getElementById(`tag-${i}`).innerText=num;});}
 function sendMail(index){let num=document.getElementById('phoneNumber').value.trim();if(!num||num.length<8){alert("Entre d'abord ton numéro en haut !");return;}let body=document.getElementById(`letter-${index}`).value;let subject=encodeURIComponent(`Demande de deban - ${num} - ${techniques[index].name}`);let bodyEnc=encodeURIComponent(body);window.location.href=`mailto:${EMAILS}?subject=${subject}&body=${bodyEnc}`;}
 const canvas=document.getElementById('rain');const ctx=canvas.getContext('2d');function resize(){canvas.width=innerWidth;canvas.height=innerHeight}window.addEventListener('resize',resize);resize();let drops=[];for(let i=0;i<140;i++) drops.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,l:10+Math.random()*25,s:1+Math.random()*3.5});function anim(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='rgba(255,10,10,0.7)';drops.forEach(d=>{ctx.beginPath();ctx.moveTo(d.x,d.y);ctx.lineTo(d.x,d.y+d.l);ctx.stroke();d.y+=d.s;if(d.y>canvas.height){d.y=-20;d.x=Math.random()*innerWidth}});requestAnimationFrame(anim);}anim();render();
-</script>
+render();</script>
 </body>
 </html>
 
