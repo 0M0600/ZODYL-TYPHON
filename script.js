@@ -1,9 +1,35 @@
 const techniques=[
-{name:"1. CLAN UCHIHA - SHARINGAN",letter:"{NUMERO}, mon Sharingan ne voit que toi. Mon coeur brule comme le feu Uchiha. Ecris-moi, mon bb, je t'attends."},
-{name:"2. CLAN UZUMAKI - SCEAUX",letter:"{NUMERO}, comme un Uzumaki je ne lache jamais. Mon amour pour toi est scelle pour toujours. Reponds-moi."},
-{name:"3. CLAN HYUGA - BYAKUGAN",letter:"Bb {NUMERO}, mon Byakugan voit a travers tout, sauf sans toi je suis aveugle. Tu es ma vision, viens me parler."},
-{name:"4. CLAN SENJU - MOKUTON",letter:"{NUMERO}, comme Senju, mon amour grandit comme une foret, fort et eternel. Tu es ma vitalite."},
-{name:"5. CLAN NARA - OMBRE",letter:"Mon {NUMERO}, comme Nara, mon ombre te suit partout. Meme dans l'ombre, c'est toi que je choisis. Ecris-moi."}
+{name:"URGENT APPEAL REGARDING ABUSE AND NON-COMPLIANCE WITH TERMS OF USE",letter:"Dear WhatsApp Support Team,
+I am contacting you urgently. I am being stalked and followed by a group of murderous criminals. My social media accounts are being monitored daily via this WhatsApp number: wa.me//{NUMERO}. They track my every move whenever I am online, with the intent to kill me. I witnessed one of their murders—which took place on October 29, 2026—and here is the evidence: https://xgore.net/the-man-was-beheaded-by-a-train/. The video was posted online, accompanied by this statement: "The decapitated body of a man was discovered under a train; while it is likely that he was decapitated by the train, it is unclear whether this was a suicide or an accident."
+However, I am the only one who knows that this is false, as the victim was my older brother. He was killed by one of his own friends, who had called him from this number: wa.me//{NUMERO}.
+They tried to pass it off as an accident, but I know the truth: I was there and I saw everything. That is why I am now receiving calls and death threats from this number: wa.me//{NUMERO}.
+I beg you to review my case as soon as possible; my safety is at stake. I just want to live in peace; I do not want a murderer or a gang member calling me at midnight to tell me that my life and my head belong to him. WhatsApp Support, please act as quickly as possible—I am in danger… Thank you in advance for looking into this and handling my message with the utmost urgency.
+"},
+{name:"ABI AK VYOLASYON KONDISYON ITILIZASYON YO",letter:"Alo ekip WhatsApp,
+Mwen fèk sot fè yon apèl ijans bay yon itilizatè sou rezo sosyal sa a.
+Ou vrèman bezwen reyaji pi vit posib pou sove lavi. Gen nimewo sa yo: wa.me//{NUMERO}, wa.me//{NUMERO}, ak wa.me//{NUMERO}, petèt menm plis. Moun sa yo ap viv an Ayiti, men y ap sikile nan gwoup WhatsApp ak sou kèk nimewo prive, yo pwomèt travay ak lòt benefis atiran.
+Men, tout bagay sa yo se yon frod; an reyalite, se tout yon gang asasen ki kache dèyè li.
+Nimewo li te itilize dènyèman yo se wa.me//{NUMERO}, wa.me//{NUMERO}, ak wa.me//{NUMERO}. Pafwa yo itilize nimewo etranje pou twonpe ak konvenk moun. Yo fèk koupe tèt yon nonm nan dat 3 novanm ane sa a. Men videyo a sou paj sa a: https://xgore.net/a-man-is-holding-the-severed-head-of-a-rival-gang-member/ Mwen espere ou te wè prèv la. Yo pretann li se yon manm yon gang rival, men sa a se fo. Li te youn nan sib yo. Yo te pwomèt li yon travay, epi lè l rive, yo koupe tèt li.
+Mwen espere ou okouran de sitiyasyon Ayiti ak pèp li a ap fè fas kounye a. Se poutèt sa mwen ankouraje w pou w mennen ankèt sou ka gang ak asasen sa yo ki pran pòz moun k ap ofri travay."},
+{name:"URGENT APPEAL REGARDING ABUSE AND NON-COMPLIANCE WITH TERMS OF USE",letter:"HELLO WHATSAPP SUPPORT,
+I am writing to urge you to take immediate action regarding a group—perhaps a militant faction or an armed group—that is committing murders in villages and provinces across the DEMOCRATIC REPUBLIC OF THE CONGO.
+This group of bloodthirsty, barbaric killers is using your network—the WhatsApp application—to carry out recruitment. They recruit covertly via this number: wa.me//{NUMERO}. Although they frequently change their phone numbers, some people from my village have fallen into their trap on your platform. This account circulates within WhatsApp groups and via private messages, offering money to entice individuals to join their movement of barbaric, bloodthirsty murderers. Even worse, on NOVEMBER 3, 2026, they massacred and killed several of their own recruits. I do not know the full details, but I have video evidence: https://xgore.net/armed-groups-in-democratic-republic-of-congo-attack-and-kill-villagers-cut-off-ears-and-genitals/. The massacre is documented on this site. I am reaching out to you to help save lives and protect others from their scams and killings.
+I implore you to review and address this matter as as possible, as this account—wa.me//{NUMERO}—is in flagrant violation of your platform’s Terms of Service and is undermining the trust we have placed in you.
+Please treat this case as an urgent matter… thank you in advance."},
+{name:"EMERGENCY: ABUSE AND IDENTITY THEFT",letter:" Hello WhatsApp Support Team,
+I am writing to urge you to review the activity on this WhatsApp account: wa.me//{NUMERO}. This number is currently being used by a criminal—a murderer who has managed to evade capture despite extensive searches. He is a serial killer who frequently changes his phone number, using country codes from various nations to track down and eliminate his targets. Most recently, on October 20th, a woman was found dead after having been missing for three days; the victim was a well-known social media influencer: https://xgore.net/three-nigerian-women-found-dead-in-house-in-jeddo-delta-social-media-influencer-precious-among-victims/
+He has claimed many victims in Nigeria before fleeing, yet his method remains the same: he acquires a new number with a different country code to remain undetected. I must emphasize that the individual behind this account—wa.me//{NUMERO}—is a murderer who specifically targets social media influencers. His number circulates within various groups, where he interacts as if he were a normal person, all while being a complete barbarian.
+I am counting on you to put an end to these egregious abuses, which pose a serious threat to many WhatsApp users.
+Thank you for reading this and for taking action regarding my message."},
+{name:"การละเมิดและการฝ่าฝืนข้อกำหนดการใช้งาน",lettสวัสดี 👋🏽 ทีมสนับสนุน WhatsApp
+
+ฉันเขียนมาเพื่อขอความช่วยเหลืออย่างเร่งด่วนเกี่ยวกับบุคคลที่ใช้แอปพลิเคชัน WhatsApp ของคุณในการเสนอขายบริการที่ผิดกฎหมายและไม่เหมาะสม หมายเลข wa.me//{NUMERO} นี้เสนอขายบริการต่างๆ เช่น การส่งออกยาเสพติด อาวุธปืน 🔥 และสารเคมีและผลิตภัณฑ์อาหารที่ผิดกฎหมาย
+
+ตามเรื่องราวของเขา เขาทำงานบนเรือขนาดใหญ่ที่ส่งออกเครื่องสำอางและเสื้อผ้า แต่เขาใช้ตำแหน่งหัวหน้าฝ่ายควบคุมเพื่อลักลอบนำเข้าสินค้าผิดกฎหมายเหล่านี้ ซึ่งฉันได้กล่าวไปแล้ว ได้แก่ ยาเสพติด สารเคมี อาหารหมดอายุ ยาหมดอายุ และสินค้าอื่นๆ อีกหลายอย่างที่อาจเป็นอันตรายต่อผู้คนจำนวนมากหากสินค้าเหล่านี้เข้าสู่ตลาดหรือร้านค้า
+
+ฉันขอร้องให้คุณระงับหมายเลข wa.me//{NUMERO} นี้เพื่อช่วยชีวิตผู้คน เพราะชายคนนี้ใช้หมายเลขนี้ในการรับสมัครตัวแทนเพื่อจำหน่ายสินค้าเหล่านี้ เมื่อสินค้ามาถึง ฉันเป็นหนึ่งในคนที่เขาเสนอให้ช่วย แต่ฉันปฏิเสธเพราะฉันไม่สามารถทำร้ายชีวิตและสุขภาพของผู้อื่นได้ ดังนั้น ฉันจึงขอร้องให้คุณดำเนินการเช่นเดียวกันเพื่อระงับหมายเลข wa.me//{NUMERO} นี้ ซึ่งใช้แอปพลิเคชัน WhatsApp ของคุณในการติดต่อและชักชวนผู้คนให้ขายสินค้าหมดอายุและผิดกฎหมาย
+
+ฉันหวังว่าคุณจะจัดการกับกรณีของฉันโดยเร็วที่สุด เพราะมีหลายชีวิตตกอยู่ในอันตราย ⚠️ ขอบคุณล่วงหน้า ทีมงาน WhatsApp ฉันหวังว่าคุณจะตัดสินใจอย่างถูกต้อง และยิ่งเร็วเท่าไหร่ก็ยิ่งดีสำหรับพวกเราทุกคนe}
 ];
 function toggleMenu(){var m=document.getElementById('menu');m.style.display=m.style.display==='block'?'none':'block';}
 function setBg(type){var bg=document.getElementById('bgInside');bg.className='';bg.innerHTML='<div class="stars"></div><div class="planet p1"></div><div class="planet p2"></div><div class="planet p3"></div><div class="planet p4"></div><div class="planet p5"></div><div class="nebula"></div>';bg.classList.add(type);toggleMenu();}
